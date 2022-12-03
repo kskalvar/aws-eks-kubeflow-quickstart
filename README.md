@@ -52,7 +52,7 @@ Key pair (login)
 ```
 Your Account Keypair
 ```
-Network settings
+Network settings 
 You could use the default security group if you've already added ssh as an inbound rule
 ```
 Select "Create Security Group"
@@ -78,6 +78,7 @@ git clone --branch ${KUBEFLOW_RELEASE_VERSION} https://github.com/kubeflow/manif
 ### Install Cloud Shell tools
 make install-tools
 
+#### Set the python alias and test
 alias python=python3.8
 python
 exit()
@@ -89,6 +90,9 @@ aws configure --profile=kubeflow
 AWS Access Key ID []: <Your Access Key ID>
 AWS Secret Access Key []: <Your Secret Access Key>
 Default region name []: us-east-1
+Default output format []: json
+
+export AWS_PROFILE=kubeflow
 ```
 Test awscli to insure it has access to AWS Resources
 ```
