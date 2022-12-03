@@ -12,7 +12,7 @@ Kubernetes simple, portable and scalable.
 This quickstart will show you how to provision an AWS EKS Cluster with Kubeflow installed.
 
 ```
-This solution shows how to create an AWS EKS Cluster with Fargate support and deploy a simple web application with an external Application Load Balancer.  
+This solution shows how to create an AWS EKS Cluster with Kubeflow support.  
 ```
 Note: This how-to assumes you are creating the eks cluster in us-east-1, you have access to your AWS Root
 Account, and you can login to an EC2 Instance remotely.
@@ -53,24 +53,27 @@ Key pair (login)
 Your Account Keypair
 ```
 Network settings
+You could use the default security group if you've already added ssh as an inbound rule
 ```
 Select "Create Security Group"
 Select "Allow SSH traffic from"
 Select "Anywhere"
 ```
 Review and Launch  
-Click on "Launch"
 
 ### Connect to EC2 Instance
 
 
 ### Set Kubeflow Versioning and Clone kubeflow Repo
-
+This will checkout the Kubeflow project which contains scripts to help launch Kubeflow
+```
 export KUBEFLOW_RELEASE_VERSION=v1.6.1
 export AWS_RELEASE_VERSION=main
+
 git clone https://github.com/awslabs/kubeflow-manifests.git && cd kubeflow-manifests
 git checkout ${AWS_RELEASE_VERSION}
 git clone --branch ${KUBEFLOW_RELEASE_VERSION} https://github.com/kubeflow/manifests.git upstream
+```
 
 ### Install Cloud Shell tools
 make install-tools
