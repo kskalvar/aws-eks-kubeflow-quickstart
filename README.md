@@ -8,9 +8,6 @@ steps, from preparing data to building, training, and deploying your ML models, 
 
 The Kubeflow project is dedicated to making deployments of machine learning (ML) workflows on
 Kubernetes simple, portable and scalable.
-
-This quickstart will show you how to provision an AWS EKS Cluster with Kubeflow installed.
-
 ```
 This solution shows how to create an AWS EKS Cluster with Kubeflow support.  
 ```
@@ -18,10 +15,10 @@ Note: This how-to assumes you are creating the eks cluster in us-east-1, you hav
 Account, and you can login to an EC2 Instance remotely.
 ```
 Steps:  
-* [Create an EC2 Instance with cloud-init](#create-an-ec2-instance-with-cloud-init)   
+* [Create an EC2 Instance](#create-an-ec2-instance)   
 * [Remove AWS EKS Cluster and Resources](#remove-aws-eks-cluster-and-resources)  
 
-## Create an EC2 Instance with cloud-init
+## Create an EC2 Instance
 We'll using an EC2 instance to install awscli , eksctl, and other support programs needed so we can create the EKS Cluster,  
 This is a step by step process.
 
