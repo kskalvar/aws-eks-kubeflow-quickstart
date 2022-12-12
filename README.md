@@ -2,9 +2,9 @@ AWS Elastic Kubernetes Service (EKS) Kubeflow QuickStart
 =======================================================
 Abstract:
 ```
-With the Advent of integrated development environment (IDE) such as AWS Sagemaker Studio for Machine
+With the advent of integrated development environment (IDE) such as AWS Sagemaker Studio for Machine
 Learning (ML) it's now possible to provide a single integrated view where you can access
-purpose-built tools to perform your ML development tasks from preparing data to building,
+purpose-built tools to perform ML development tasks from preparing data to building,
 training, and deploying your ML models.
 
 Kubeflow is an opensource ML IDE where you can access purpose-built tools to perform your ML
@@ -28,7 +28,7 @@ Steps:
 * [Deploy Kubeflow]()
 * [Connect to Kubeflow Dashboard]()
 * [Delete EKS Cluster]()
-* [Delete kubeflow_cloud_shell](#Delete_kubeflow_cloud_shell)
+* [Delete kubeflow_cloud_shell](#Delete-kubeflow_cloud_shell)
 * [Troubleshooting](#Troubleshooting)
 * [References]()
 
