@@ -7,7 +7,7 @@ Machine Learning (ML) it's now possible to provide a single integrated view wher
 purpose-built tools to perform ML development tasks from preparing data to building,
 training, and deploying your ML models.
 
-Kubeflow is an opensource ML IDE where you can access purpose-built tools to perform your ML
+Kubeflow is an opensource ML IDE where you can access purpose-built tools to make your ML
 development tasks on Kubernetes simple, portable and scalable.
 
 ```
@@ -68,10 +68,11 @@ Select "Anywhere"
 Review and Launch  
 
 ### Connect to kubeflow_cloud_shell and Install Basic Tools
-This step assumes you've already connected to your kubeflow_cloud_shell
+This step assumes you've already connected to your kubeflow_cloud_shell from your local machine
 ```
 sudo apt update
 sudo apt install git curl unzip tar make sudo vim wget -y
+
 ```
 
 ### Set Kubeflow Version and Check Out Kubeflow Repo
@@ -83,10 +84,12 @@ export AWS_RELEASE_VERSION=main
 git clone https://github.com/awslabs/kubeflow-manifests.git && cd kubeflow-manifests
 git checkout ${AWS_RELEASE_VERSION}
 git clone --branch ${KUBEFLOW_RELEASE_VERSION} https://github.com/kubeflow/manifests.git upstream
+
 ```
 Install Kubeflow Specific Tools
 ```
 make install-tools
+
 ```
 
 Set the python alias and insure you have Python Version 3.8 installed.
@@ -94,12 +97,14 @@ Set the python alias and insure you have Python Version 3.8 installed.
 alias python=python3.8
 python
 exit()
+
 ```
 
 ### Configure AWS CLI Security Credentials
 Use the AWS CLI to set Access Key, Secret Key, and Region Name
 ```
 aws configure --profile=kubeflow
+
 ```
 AWS Access Key ID []: "Your Access Key ID"  
 AWS Secret Access Key []: "Your Secret Access Key"   
@@ -108,20 +113,21 @@ Default output format []: json
 
 ```
 export AWS_PROFILE=kubeflow
+
 ```
 
 Test AWS CLI to insure it has access to AWS Resources
 ```
 aws s3 ls
+
 ```
 
 ### Create EKS Cluster 
-Using eksctl create the eks cluster (takes about 20 minutes)
+Using eksctl to create the eks cluster (takes about 20 minutes)
 ```
 export CLUSTER_NAME=kubeflow
 export CLUSTER_REGION=us-east-1
-```
-```
+
 eksctl create cluster \
 --name ${CLUSTER_NAME} \
 --version 1.22 \
@@ -159,6 +165,7 @@ kubectl get pods -n knative-eventing
 kubectl get pods -n knative-serving
 kubectl get pods -n kubeflow
 kubectl get pods -n kubeflow-user-example-com
+
 ```
 
 ### Connect to Kubeflow Dashboard
@@ -173,30 +180,32 @@ Using ssh from your local machine, open a tunnel to your AWS EC2 Instance
 ssh -i <AWS EC2 Private Key> ubuntu@<AWS EC2 Instance IP Address> -L 8001:localhost:8001
 ```
 Connect to Dashboard using Local Browser
-Using your local client-side browser enter the following URL. The configure-kube-dashboard script
-also generated a "Security Token" required to login to the dashboard.
+Using your local client-side browser enter the following URL.
 ```
 http://localhost:8080
 
+```
+Login to the Kubeflow Dashboard with the following credentials.
+```
 email : user@example.com
 password : 12341234
 ```
 
 #### Delete EKS Cluster
-Delete the EKS Cluster using eksctl
 ```
 eksctl delete cluster --region us-east-1 --name=kubeflow
 ```
 Wait till completed before proceeding.  
 
 ### Delete kubeflow_cloud_shell
-Using the AWS Console goto the EC2 Dashboard and delete the ec2 instance we used as the eks_cloud_shell.
+Using the AWS Console goto the EC2 Dashboard and delete the ec2 instance we used as the
+eks_cloud_shell.
 ```
 Terminate "kubeflow_cloud_shell" Instance  
 ```
 ### Troubleshooting
 #### make deploy-kubeflow INSTALLATION_OPTION=helm DEPLOYMENT_OPTION=vanilla Fails!  
-Recommend removing and creating a new eks cluster, then Deploy Kubeflow again.
+Recommend removing and creating a new eks cluster, then deploy Kubeflow again.
 
 ### References
 Kubeflow
