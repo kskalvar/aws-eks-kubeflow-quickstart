@@ -68,7 +68,15 @@ Select "Anywhere"
 Review and Launch  
 
 ### Connect to kubeflow_cloud_shell and Install Basic Tools
-This step assumes you've already connected to your kubeflow_cloud_shell from your local machine
+
+NOTE: AWS EC2 Private Key should be in the directory you run ssh  
+NOTE: Public IPv4 DNS for your kubeflow_cloud_shell
+```
+ssh -i <AWS EC2 Private Key> ubuntu@<Public IPv4 DNS> -o ExitOnForwardFailure=yes
+
+```
+
+Install Basic Tools
 ```
 sudo apt update
 sudo apt install git curl unzip tar make sudo vim wget -y
@@ -169,14 +177,14 @@ kubectl get pods -n kubeflow-user-example-com
 ```
 
 ### Connect to Kubeflow Dashboard
-Run the following command on your kubeflow_cloud_shell
+Run the following command from your kubeflow_cloud_shell
 ```
 make port-forward
 ```
 Use a second ssh from your local machine to open a tunnel to your kubeflow_cloud_shell.  This second
 ssh will allow you to view the Kubeflow Dashboard directly on your local machine.
 
-NOTE: AWS EC2 Private Key should be in the directory you run ssh
+NOTE: AWS EC2 Private Key should be in the directory you run ssh  
 NOTE: Public IPv4 DNS for your kubeflow_cloud_shell
 ```
 ssh -i <AWS EC2 Private Key> -L 8080:localhost:8080 -N ubuntu@<Public IPv4 DNS> -o ExitOnForwardFailure=yes
