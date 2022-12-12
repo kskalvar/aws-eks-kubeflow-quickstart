@@ -19,7 +19,7 @@ AWS Root Account, and you can login to an EC2 Instance remotely.
 Steps:  
 * [Create kubeflow_cloud_shell](#Create-kubeflow_cloud_shell)
 * [Connect to kubeflow_cloud_shell and Install Basic Tools](#Connect-to-kubeflow_cloud_shell-and-Install-Basic-Tools)
-* [Set Kubeflow Version and Check-out Kubeflow Repo](#Set-Kubeflow-Version-and-Check-out-Kubeflow-Repo)
+* [Set Kubeflow Version and Check Out Kubeflow Repo](#Set-Kubeflow-Version-and-Check-Out-Kubeflow-Repo)
 * [Configure AWS CLI Security Credentials](#Configure-AWS-CLI-Security-Credentials)
 * [Create EKS Cluster](#Create-EKS-Cluster)
 * [Deploy Kubeflow](#Deploy-Kubeflow)
@@ -74,7 +74,7 @@ sudo apt update
 sudo apt install git curl unzip tar make sudo vim wget -y
 ```
 
-### Set Kubeflow Version and Check-out Kubeflow Repo
+### Set Kubeflow Version and Check Out Kubeflow Repo
 This will checkout the Kubeflow project
 ```
 export KUBEFLOW_RELEASE_VERSION=v1.6.1
@@ -195,7 +195,7 @@ Using the AWS Console goto the EC2 Dashboard and delete the ec2 instance we used
 Terminate "kubeflow_cloud_shell" Instance  
 ```
 ### Troubleshooting
-make deploy-kubeflow INSTALLATION_OPTION=helm DEPLOYMENT_OPTION=vanilla Fails!  
+#### make deploy-kubeflow INSTALLATION_OPTION=helm DEPLOYMENT_OPTION=vanilla Fails!  
 Recommend removing and creating a new eks cluster, then Deploy Kubeflow again.
 
 ### References
