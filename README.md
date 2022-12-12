@@ -28,7 +28,7 @@ Steps:
 * [Deploy Kubeflow]()
 * [Connect to Kubeflow Dashboard]()
 * [Delete EKS Cluster]()
-* [Delete kubeflow_cloud_shell]()
+* [Delete kubeflow_cloud_shell](#Delete kubeflow_cloud_shell)
 * [Troubleshooting](#Troubleshooting)
 * [References]()
 
@@ -192,7 +192,7 @@ Wait till completed before proceeding.
 #### Delete kubeflow_cloud_shell
 Using the AWS Console goto the EC2 Dashboard and delete the ec2 instance we used as the eks_cloud_shell.
 ```
-Terminate "eks_cloud_shell" Instance  
+Terminate "kubeflow_cloud_shell" Instance  
 ```
 ### Troubleshooting
 #### make deploy-kubeflow INSTALLATION_OPTION=helm DEPLOYMENT_OPTION=vanilla Fails!
