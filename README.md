@@ -33,7 +33,7 @@ Steps:
 We'll using an EC2 instance to install awscli , eksctl, and other support tools needed to create
 the EKS Cluster and Install Kubeflow.
 
-Login to the AWS Managment Console goto the AWS EC2 Dashboard  
+Login to the AWS Managment Console go to the AWS EC2 Dashboard  
 Click on "Launch Instance"  
 
 Name and tags
@@ -68,6 +68,7 @@ Select "Anywhere"
 Review and Launch  
 
 ### Connect to kubeflow_cloud_shell and Install Basic Tools
+This step assumes you've already connected to your kubeflow_cloud_shell
 ```
 sudo apt update
 sudo apt install git curl unzip tar make sudo vim wget -y
@@ -84,7 +85,9 @@ git checkout ${AWS_RELEASE_VERSION}
 git clone --branch ${KUBEFLOW_RELEASE_VERSION} https://github.com/kubeflow/manifests.git upstream
 ```
 Install Kubeflow Specific Tools
+```
 make install-tools
+```
 
 Set the python alias and insure you have Python Version 3.8 installed.
 ```
@@ -98,10 +101,10 @@ Use the AWS CLI to set Access Key, Secret Key, and Region Name
 ```
 aws configure --profile=kubeflow
 ```
-AWS Access Key ID []: <Your Access Key ID> 
-AWS Secret Access Key []: <Your Secret Access Key> 
-Default region name []: us-east-1 
-Default output format []: json 
+AWS Access Key ID []: <Your Access Key ID>  
+AWS Secret Access Key []: <Your Secret Access Key>   
+Default region name []: us-east-1  
+Default output format []: json  
 
 ```
 export AWS_PROFILE=kubeflow
