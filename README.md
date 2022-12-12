@@ -17,15 +17,12 @@ Note: This how-to assumes you are creating an eks cluster in us-east-1, you have
 Account, and you can login to an EC2 Instance remotely.
 ```
 Steps:  
-* [Create an EC2 Instance](#create-an-ec2-instance)   
-* [Remove AWS EKS Cluster and Resources](#remove-aws-eks-cluster-and-resources)  
-
 * [Create kubeflow_cloud_shell](#Create-kubeflow_cloud_shell)
 * [Connect to kubeflow_cloud_shell and Install Basic Tools](#Connect-to-kubeflow_cloud_shell-and-Install-Basic-Tools)
-* [Set Kubeflow Version and Check-out Kubeflow Repo](#Set Kubeflow Version and Check-out Kubeflow Repo)
-* [Configure AWS CLI Security Credentials](#Configure AWS CLI Security Credentials)
-* [Create EKS Cluster](#Create EKS Cluster)
-* [Deploy Kubeflow](#Deploy Kubeflow)
+* [Set Kubeflow Version and Check-out Kubeflow Repo](#Set-Kubeflow-Version-and-Check-out-Kubeflow-Repo)
+* [Configure AWS CLI Security Credentials](#Configure-AWS-CLI-Security-Credentials)
+* [Create EKS Cluster](#Create-EKS-Cluster)
+* [Deploy Kubeflow](#Deploy-Kubeflow)
 * [Connect to Kubeflow Dashboard](#Connect-to-Kubeflow-Dashboard)
 * [Delete EKS Cluster](#Delete-EKS-Cluster)
 * [Delete kubeflow_cloud_shell](#Delete-kubeflow_cloud_shell)
