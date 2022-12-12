@@ -169,18 +169,20 @@ kubectl get pods -n kubeflow-user-example-com
 ```
 
 ### Connect to Kubeflow Dashboard
-Run the following command on your EC2 instance
+Run the following command on your kubeflow_cloud_shell
 ```
 make port-forward
 ```
+Use a second ssh from your local machine to open a tunnel to your kubeflow_cloud_shell.  This second
+ssh will allow you to view the Kubeflow Dashboard directly on your local machine.
 
-Connect to EC2 Instance redirecting port 8001 Locally
-Using ssh from your local machine, open a tunnel to your AWS EC2 Instance
+NOTE: AWS EC2 Private Key should be in the directory you run ssh
+NOTE: Public IPv4 DNS for your kubeflow_cloud_shell
 ```
-ssh -i <AWS EC2 Private Key> ubuntu@<AWS EC2 Instance IP Address> -L 8001:localhost:8001
+ssh -i <AWS EC2 Private Key> -L 8080:localhost:8080 -N ubuntu@<Public IPv4 DNS> -o ExitOnForwardFailure=yes
 ```
-Connect to Dashboard using Local Browser
-Using your local client-side browser enter the following URL.
+Connect to Kubeflow Dashboard using your Local Browser
+Enter the following URL.
 ```
 http://localhost:8080
 
@@ -195,7 +197,7 @@ password : 12341234
 ```
 eksctl delete cluster --region us-east-1 --name=kubeflow
 ```
-Wait till completed before proceeding.  
+Wait till cluster is deleted before proceeding.  
 
 ### Delete kubeflow_cloud_shell
 Using the AWS Console goto the EC2 Dashboard and delete the ec2 instance we used as the
@@ -204,7 +206,7 @@ eks_cloud_shell.
 Terminate "kubeflow_cloud_shell" Instance  
 ```
 ### Troubleshooting
-#### make deploy-kubeflow INSTALLATION_OPTION=helm DEPLOYMENT_OPTION=vanilla Fails!  
+* make deploy-kubeflow INSTALLATION_OPTION=helm DEPLOYMENT_OPTION=vanilla Fails!  
 Recommend removing and creating a new eks cluster, then deploy Kubeflow again.
 
 ### References
