@@ -102,7 +102,7 @@ Use the AWS CLI to set Access Key, Secret Key, and Region Name
 aws configure --profile=kubeflow
 ```
 AWS Access Key ID []: "Your Access Key ID"  
-AWS Secret Access Key []: <Your Secret Access Key>   
+AWS Secret Access Key []: "Your Secret Access Key"   
 Default region name []: us-east-1  
 Default output format []: json  
 
@@ -195,13 +195,12 @@ Using the AWS Console goto the EC2 Dashboard and delete the ec2 instance we used
 Terminate "kubeflow_cloud_shell" Instance  
 ```
 ### Troubleshooting
-## make deploy-kubeflow INSTALLATION_OPTION=helm DEPLOYMENT_OPTION=vanilla Fails!
+make deploy-kubeflow INSTALLATION_OPTION=helm DEPLOYMENT_OPTION=vanilla Fails!  
 Recommend removing and creating a new eks cluster, then Deploy Kubeflow again.
 
 ### References
 Kubeflow
-https://www.kubeflow.org/docs
-
+https://www.kubeflow.org/docs  
 Kubeflow on AWS
 https://awslabs.github.io/kubeflow-manifests
 
