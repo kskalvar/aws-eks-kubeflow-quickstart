@@ -28,7 +28,7 @@ Steps:
 * [Deploy Kubeflow]()
 * [Connect to Kubeflow Dashboard]()
 * [Delete EKS Cluster]()
-* [Delete kubeflow_cloud_shell](#Delete kubeflow_cloud_shell)
+* [Delete kubeflow_cloud_shell](#Delete_kubeflow_cloud_shell)
 * [Troubleshooting](#Troubleshooting)
 * [References]()
 
