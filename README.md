@@ -2,8 +2,8 @@ AWS Elastic Kubernetes Service (EKS) Kubeflow QuickStart
 =======================================================
 Abstract:
 ```
-With the advent of integrated development environment (IDE) such as AWS Sagemaker Studio for Machine
-Learning (ML) it's now possible to provide a single integrated view where you can access
+With the advent of integrated development environments (IDE) such as AWS Sagemaker Studio for
+Machine Learning (ML) it's now possible to provide a single integrated view where you can access
 purpose-built tools to perform ML development tasks from preparing data to building,
 training, and deploying your ML models.
 
@@ -13,8 +13,8 @@ development tasks on Kubernetes simple, portable and scalable.
 ```
 This solution shows how to create an AWS EKS Cluster with Kubeflow support.  
 ```
-Note: This how-to assumes you are creating an eks cluster in us-east-1, you have access to your AWS Root
-Account, and you can login to an EC2 Instance remotely.
+Note: This how-to assumes you are creating an eks cluster in us-east-1, you have access to your
+AWS Root Account, and you can login to an EC2 Instance remotely.
 ```
 Steps:  
 * [Create kubeflow_cloud_shell](#Create-kubeflow_cloud_shell)
@@ -98,10 +98,10 @@ Use the AWS CLI to set Access Key, Secret Key, and Region Name
 ```
 aws configure --profile=kubeflow
 ```
-AWS Access Key ID []: <Your Access Key ID>
-AWS Secret Access Key []: <Your Secret Access Key>
-Default region name []: us-east-1
-Default output format []: json
+AWS Access Key ID []: <Your Access Key ID> 
+AWS Secret Access Key []: <Your Secret Access Key> 
+Default region name []: us-east-1 
+Default output format []: json 
 
 ```
 export AWS_PROFILE=kubeflow
@@ -191,7 +191,7 @@ Using the AWS Console goto the EC2 Dashboard and delete the ec2 instance we used
 ```
 Terminate "kubeflow_cloud_shell" Instance  
 ```
-#### Troubleshooting
+### Troubleshooting
 ## make deploy-kubeflow INSTALLATION_OPTION=helm DEPLOYMENT_OPTION=vanilla Fails!
 Recommend removing and creating a new eks cluster, then Deploy Kubeflow again.
 
