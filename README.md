@@ -2,15 +2,15 @@ AWS Elastic Kubernetes Service (EKS) Kubeflow QuickStart
 =======================================================
 Abstract:
 ```
-With the recent advent of integrated development environments (IDE) such as AWS Sagemaker Studio for
-Machine Learning (ML), it's now possible to provide a single integrated view where you can access
-purpose-built tools to perform ML development tasks from preparing data to building,
+With the recent advent of integrated development environments (IDE) such as AWS SageMaker Studio
+for Machine Learning (ML), it's now possible to provide a single integrated view where you can
+access purpose-built tools to perform ML development tasks from preparing data to building,
 training, and deploying your ML models.
 
-Kubeflow is an opensource ML IDE you also can access purpose-built tools to perfom ML development
-tasks from preparing data to building, training, and deploying your ML models but runs on Kubernetes.
-But because it runs on Kubernetes its portable and scalable across multiple cloud and on-premise
-infrastructure.
+Kubeflow is an open source ML IDE you can also access purpose-built tools to perfom ML development
+tasks from preparing data to building, training, and deploying your ML models, but it runs on
+Kubernetes.  But because it runs on Kubernetes its portable and scalable across multiple cloud and
+on premise infrastructure.
 
 ```
 This solution shows how to create an AWS EKS Cluster with Kubeflow support.  
@@ -35,7 +35,7 @@ Steps:
 We'll using an EC2 instance to install awscli , eksctl, and other support tools needed to create
 the EKS Cluster and Install Kubeflow.
 
-Login to the AWS Managment Console go to the AWS EC2 Dashboard  
+#### Login to the AWS Managment Console go to the AWS EC2 Dashboard  
 Click on "Launch Instance"  
 
 Name and tags
