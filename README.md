@@ -39,12 +39,17 @@ the EKS Cluster and Install Kubeflow.
 Click on "Launch Instance"  
 
 Name and tags
+Name:
 ```
-Name: kubeflow_cloud_shell
+kubeflow_cloud_shell
 ```
 Application and OS Images (Amazon Machine Image)
+NOTE: Please use the specific AMI.  I found that using the latest Ubuntu AMI broke due to
+      Perl 3.8 is deployed on later versions of Ubuntu.
+       
+Search:
 ```
-Search: ubuntu-bionic-18.04-amd64-server-20220901
+ubuntu-bionic-18.04-amd64-server-20220901
 ```
 Choose AMI from Community AMI Tab
 ```
@@ -72,7 +77,7 @@ Review and Launch
 ### Connect to kubeflow_cloud_shell and Install Basic Tools
 
 NOTE: AWS EC2 Private Key should be in the directory you run ssh  
-NOTE: Public IPv4 DNS for your kubeflow_cloud_shell
+NOTE: AWS EC2 Public IPv4 DNS for your kubeflow_cloud_shell
 ```
 ssh -i <AWS EC2 Private Key> ubuntu@<Public IPv4 DNS> -o ExitOnForwardFailure=yes
 
@@ -198,9 +203,15 @@ http://localhost:8080
 
 ```
 Login to the Kubeflow Dashboard with the following credentials.
+Email Address
 ```
-email : user@example.com
-password : 12341234
+user@example.com
+
+```
+Password
+```
+12341234
+
 ```
 
 #### Delete EKS Cluster
