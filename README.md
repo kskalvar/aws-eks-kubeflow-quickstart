@@ -184,7 +184,7 @@ kubectl get pods -n kubeflow-user-example-com
 ```
 
 ### Connect to Kubeflow Dashboard
-Run the following command from your kubeflow_cloud_shell
+Run the following command directly from your kubeflow_cloud_shell
 ```
 make port-forward
 ```
@@ -204,16 +204,15 @@ http://localhost:8080
 ```
 Login to the Kubeflow Dashboard with the following credentials.
 Email Address
+Password
 ```
 user@example.com
 
 ```
-Password
 ```
 12341234
 
 ```
-
 #### Delete EKS Cluster
 ```
 eksctl delete cluster --region us-east-1 --name=kubeflow
@@ -227,7 +226,7 @@ eks_cloud_shell.
 Terminate "kubeflow_cloud_shell" Instance  
 ```
 ### Troubleshooting
-* make deploy-kubeflow INSTALLATION_OPTION=helm DEPLOYMENT_OPTION=vanilla Fails!  
+* "make deploy-kubeflow INSTALLATION_OPTION=helm DEPLOYMENT_OPTION=vanilla" Fails!  
 Recommend removing and creating a new eks cluster, then deploy Kubeflow again.
 
 ### References
