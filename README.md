@@ -44,9 +44,10 @@ Name:
 kubeflow_cloud_shell
 ```
 Application and OS Images (Amazon Machine Image)
+```
 NOTE: Please use the specific AMI.  I found that using the latest Ubuntu AMI broke due to
-      Perl 3.8 is deployed on later versions of Ubuntu.
-       
+      Perl3.8 being deployed differently on later versions of Ubuntu.
+```       
 Search:
 ```
 ubuntu-bionic-18.04-amd64-server-20220901
@@ -167,7 +168,9 @@ Check Cluster Nodes Using kubectl test status of cluster nodes
 kubectl get nodes
 ```
 #### Deploy Kubeflow
+Be sure you're in "kubeflow-manifests" directory before deploying kubeflow! (takes about 10 minutes)
 ```
+cd $HOME/kubeflow-manifests
 make deploy-kubeflow INSTALLATION_OPTION=helm DEPLOYMENT_OPTION=vanilla
 ```
 
