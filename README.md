@@ -216,7 +216,7 @@ user@example.com
 12341234
 
 ```
-#### Delete EKS Cluster
+### Delete EKS Cluster
 ```
 eksctl delete cluster --region us-east-1 --name=kubeflow
 ```
