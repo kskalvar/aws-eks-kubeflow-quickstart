@@ -121,16 +121,13 @@ Use the AWS CLI to set Access Key, Secret Key, and Region Name
 ```
 aws configure --profile=kubeflow
 
+export AWS_PROFILE=kubeflow
+
 ```
 AWS Access Key ID []: "Your Access Key ID"  
 AWS Secret Access Key []: "Your Secret Access Key"   
 Default region name []: us-east-1  
 Default output format []: json  
-
-```
-export AWS_PROFILE=kubeflow
-
-```
 
 Test AWS CLI to insure it has access to AWS Resources
 ```
