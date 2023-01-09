@@ -16,7 +16,7 @@ on premise infrastructure.
 This solution shows how to create an AWS EKS Cluster with Kubeflow support.  
 ```
 Note: This how-to assumes you are creating an eks cluster in us-east-1, you have access to your
-AWS Root Account, and you can login to an EC2 Instance remotely.
+AWS Account, and you can login to an EC2 Instance remotely.
 ```
 Steps:  
 * [Create kubeflow_cloud_shell](#Create-kubeflow_cloud_shell)
@@ -77,10 +77,11 @@ Review and Launch
 
 ### Connect to kubeflow_cloud_shell and Install Basic Tools
 
-NOTE: AWS EC2 Private Key should be in the directory you run ssh  
-NOTE: AWS EC2 Public IPv4 DNS for your kubeflow_cloud_shell
+NOTE: AWS EC2 Key Pair File should be in the directory you run ssh from  
+NOTE: You'll need AWS EC2 Public IPv4 DNS for your kubeflow_cloud_shell
+
 ```
-ssh -i <AWS EC2 Private Key> ubuntu@<Public IPv4 DNS> -o ExitOnForwardFailure=yes
+ssh -i <AWS EC2 Key Pair File> ubuntu@<Public IPv4 DNS> -o ExitOnForwardFailure=yes
 
 ```
 
@@ -121,13 +122,16 @@ Use the AWS CLI to set Access Key, Secret Key, and Region Name
 ```
 aws configure --profile=kubeflow
 
-export AWS_PROFILE=kubeflow
-
 ```
 AWS Access Key ID []: "Your Access Key ID"  
 AWS Secret Access Key []: "Your Secret Access Key"   
 Default region name []: us-east-1  
-Default output format []: json  
+Default output format []: json
+
+```
+export AWS_PROFILE=kubeflow
+
+```
 
 Test AWS CLI to insure it has access to AWS Resources
 ```
@@ -191,10 +195,10 @@ make port-forward
 Use a second ssh from your local machine to open a tunnel to your kubeflow_cloud_shell.  This second
 ssh will allow you to view the Kubeflow Dashboard directly on your local machine.
 
-NOTE: AWS EC2 Private Key should be in the directory you run ssh  
+NOTE: AWS EC2 Key Pair File should be in the directory you run ssh  
 NOTE: Public IPv4 DNS for your kubeflow_cloud_shell
 ```
-ssh -i <AWS EC2 Private Key> -L 8080:localhost:8080 -N ubuntu@<Public IPv4 DNS> -o ExitOnForwardFailure=yes
+ssh -i <AWS EC2 Key Pair File> -L 8080:localhost:8080 -N ubuntu@<Public IPv4 DNS> -o ExitOnForwardFailure=yes
 ```
 Connect to Kubeflow Dashboard using your Local Browser
 Enter the following URL.
