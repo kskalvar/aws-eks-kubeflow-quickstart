@@ -12,6 +12,8 @@ tasks from preparing data to building, training, and deploying your ML models, b
 Kubernetes.  But because it runs on Kubernetes its portable and scalable across multiple cloud and
 on premise infrastructure.
 
+Please see: https://www.youtube.com/@kal_technology/videos
+
 ```
 This solution shows how to create an AWS EKS Cluster with Kubeflow support.  
 ```
