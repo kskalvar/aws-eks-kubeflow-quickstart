@@ -13,7 +13,6 @@ Kubernetes.  But because it runs on Kubernetes its portable and scalable across 
 on premise infrastructure.
 
 Please see: https://www.youtube.com/@kal_technology/videos for recorded presentation
-Please see: https://github.com/kskalvar/aws-eks-kubeflow-quickstart for step my step instructions
 
 ```
 This solution shows how to create an AWS EKS Cluster with Kubeflow support.  
