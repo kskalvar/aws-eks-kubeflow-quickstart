@@ -7,7 +7,7 @@ for Machine Learning (ML), it's now possible to provide a single integrated view
 access purpose-built tools to perform ML development tasks from preparing data to building,
 training, and deploying your ML models.
 
-Kubeflow is an open source ML IDE you can also access purpose-built tools to perfom ML development
+Kubeflow is an open source ML IDE you can also access purpose-built tools to perform ML development
 tasks from preparing data to building, training, and deploying your ML models, but it runs on
 Kubernetes.  But because it runs on Kubernetes its portable and scalable across multiple cloud and
 on premise infrastructure.
