@@ -238,8 +238,14 @@ Recommend removing and creating a new eks cluster, then deploy Kubeflow again.
 ### References
 Kubeflow
 https://www.kubeflow.org/docs  
+
 Kubeflow on AWS
 https://awslabs.github.io/kubeflow-manifests
+
+
+YouTube Channel
+https://youtu.be/M62kj924s2o
+
 
 
 
